@@ -15,10 +15,10 @@ Projeto de Tópicos Especiais - Cadastro de atendimentos entre pacientes e profi
 ## Operações
 
 1. MS1
-- [] OP1
+- [ ] OP1
 
 2. MS2
-- [] OP1
+- [ ] OP1
   
 3. MS3
-- [] OP1
+- [ ] OP1
