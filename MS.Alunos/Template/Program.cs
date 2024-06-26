@@ -1,4 +1,5 @@
-using Exemplo;
+using Alunos;
+using Alunos.Servicos;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +15,7 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
-builder.Services.AddScoped<IServExemplo, ServExemplo>();
+builder.Services.AddScoped<IAlunoService, AlunoService>();
 
 var app = builder.Build();
 
