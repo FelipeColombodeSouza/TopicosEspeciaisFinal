@@ -69,9 +69,9 @@ O sistema atualmente disponibiliza as fuções:
   Request:
   ```
    {
-     "nota": 0,
-     "materia": 0,
-     "idAluno": 0
+     "nota": int,
+     "materia": string,
+     "idAluno": int
    }
   ```
 - **Editar:** Edita os dados de uma avaliação, conforme o Id de avaliação fornecido.
@@ -79,8 +79,8 @@ O sistema atualmente disponibiliza as fuções:
    Request:
    ```
    {
-     "nota": 0,
-     "materia": 0
+     "nota": int,
+     "materia": string
    }
    ```
 - **BuscarTodos:** Busca todos os registros de avaliação.
@@ -89,9 +89,40 @@ O sistema atualmente disponibiliza as fuções:
 
 - **BuscarPorAluno:** Busca todos registro de avaliação de um aluno, conforme o Id de aluno fornecido.
 
-- **Remover:** Remove um registro de aluno conforme o Id de aluno fornecido.
+- **Remover:** Remove um registro de avaliação conforme o Id fornecido.
 
-- **AprovarMedia:** Muda o status de aprovação de um aluno aluno, conforme a média de todas as suas avaliações. Recebe o Id de um aluno para realizar o calculo.
+- **AprovarMedia:** Muda o status de aprovação de um aluno, conforme a média de todas as suas avaliações. Recebe o Id de um aluno para realizar o calculo.
   
 ### Mensalidades
+
+- **Inserir:** Insere uma nova mensalidade.
+
+  Request:
+  ```
+   {
+     "mes": "string",
+     "valor": int,
+     "situacao": enum (0 - EmAberto, 1 - Paga),
+     "idAluno": int
+   }
+  ```
+- **Editar:** Edita os dados de uma mensalidade, conforme o Id de mensalidade fornecido.
+
+   Request:
+   ```
+   {
+     "valor": int,
+     "situacao": int,
+     "mes": "string"
+   }
+   ```
+- **BuscarTodos:** Busca todos os registros de mensalidade.
+
+- **BuscarMensalidade:** Busca um registro de mensalidade conforme o Id de mensalidade fornecido.
+
+- **BuscarPorAluno:** Busca a última mensalidade de um aluno, conforme o Id de aluno fornecido.
+
+- **Remover:** Remove um registro de mensalidade conforme o Id fornecido.
+
+- **AprovarMedia:** Muda o status de mensalidade de um aluno aluno, conforme a o status da última mensalidade dele. Recebe o Id de um aluno.
 
