@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Reflection.Emit;
+using Mensalidade.Servicos;
 
-namespace Exemplo
+namespace Mensalidade
 {
     public class DataContext : DbContext
     {
@@ -11,12 +12,12 @@ namespace Exemplo
 
         }
         
-        //public DbSet<Exemplo> Exemplos { get; set; }
+        public DbSet<MensalidadeEntidade> Mensalidade { get; set; }
         
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Exemplo>().HasKey(p => p.Id);
+            modelBuilder.Entity<MensalidadeEntidade>().HasKey(p => p.Id);
             
 
             base.OnModelCreating(modelBuilder);

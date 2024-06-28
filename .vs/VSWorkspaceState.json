@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MS.Avaliacoes",
+    "\\MS.Avaliacoes\\Avaliacoes",
+    "\\MS.Avaliacoes\\Avaliacoes\\Servicos",
+    "\\MS.Mensalidade",
+    "\\MS.Mensalidade\\Mensalidade",
+    "\\MS.Mensalidade\\Mensalidade\\Controllers"
   ],
-  "SelectedNode": "\\TemplateMicrosservico.sln (Microsservico 3\\TemplateMicrosservico.sln)",
+  "SelectedNode": "\\MS.Mensalidade\\Mensalidade\\Controllers\\MensalidadeController.cs",
   "PreviewInSolutionExplorer": false
 }
