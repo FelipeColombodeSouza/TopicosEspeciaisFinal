@@ -20,11 +20,78 @@ O sistema atualmente disponibiliza as fuções:
 
 ## Operações
 
-1. MS1
-- [ ] OP1
+### Alunos
+- **Inserir:** Insere um novo aluno.
 
-2. MS2
-- [ ] OP1
+  Request:
+  ```
+   {
+     "nome": "string",
+     "curso": "string",
+     "idade": int,
+     "endereco": "string",
+     "telefone": "string"
+   }
+  ```
+- **Editar:** Edita os dados de um aluno, conforme o Id de aluno fornecido.
+
+   Request:
+   ```
+   {
+     "nome": "string",
+     "curso": "string",
+     "idade": int,
+     "endereco": "string",
+     "telefone": "string"
+   }
+   ```
+- **BuscarTodos:** Busca todos os registros de aluno.
+
+- **Buscar:** Busca um registro de aluno conforme o Id de aluno fornecido.
+
+- **Remover:** Remove um registro de aluno conforme o Id de aluno fornecido.
+
+- **Aprovar:** Muda o status de aprovação do aluno, utilizado pelo MS de avaliações após o cálculo de média.
+
+  Request:
+  ```
+  {
+     "id": int,
+     "aprovar": enum (0 - EmAguardo, 1 - Aprovado, 2 - Reprovado) 
+  }
+   ```
+
+
+
+### Avaliações
+- **Inserir:** Insere uma nova avaliação.
+
+  Request:
+  ```
+   {
+     "nota": 0,
+     "materia": 0,
+     "idAluno": 0
+   }
+  ```
+- **Editar:** Edita os dados de uma avaliação, conforme o Id de avaliação fornecido.
+
+   Request:
+   ```
+   {
+     "nota": 0,
+     "materia": 0
+   }
+   ```
+- **BuscarTodos:** Busca todos os registros de avaliação.
+
+- **Buscar:** Busca um registro de avaliação conforme o Id de avaliação fornecido.
+
+- **BuscarPorAluno:** Busca todos registro de avaliação de um aluno, conforme o Id de aluno fornecido.
+
+- **Remover:** Remove um registro de aluno conforme o Id de aluno fornecido.
+
+- **AprovarMedia:** Muda o status de aprovação de um aluno aluno, conforme a média de todas as suas avaliações. Recebe o Id de um aluno para realizar o calculo.
   
-3. MS3
-- [ ] OP1
+### Mensalidades
+
